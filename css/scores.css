@@ -1,0 +1,26 @@
+#scores {
+    display : flex;
+}
+
+.score_team {
+    position : relative;
+    flex : 1;
+    border : 1px solid yellow;
+}
+
+.score__picture {
+    background: url("../resources/images/score-25.jpg") no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    height : 100%;
+    width : 100%;
+}
+
+.score__number {
+    position: absolute;
+    top : 50px;
+    right : 50px;
+    font-family: "Burger plain", "Burger flat", serif;
+    color : #cf0000;
+    font-size : 100px;
+}

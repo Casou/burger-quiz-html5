@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Burger quiz</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tv.css">
+    <link rel="stylesheet" href="css/nuggets.css">
+    <link rel="stylesheet" href="css/sel_ou_poivre.css">
+    <link rel="stylesheet" href="css/menus.css">
+    <link rel="stylesheet" href="css/scores.css">
+
+</head>
+<body>
+
+    <section id="video_intro" class="screen">
+        <video preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();">
+            <source src="resources/videos/generique.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section id="nuggets" class="screen">
+        <div class="tv">
+            <p id="nuggets__question">Question</p>
+            <ul id="nuggets__reponses">
+                <li><span class="nuggets__reponses_number">A</span> <span class="nuggets__reponses_text">Text</span></li>
+                <li><span class="nuggets__reponses_number">B</span> <span class="nuggets__reponses_text">Text</span></li>
+                <li><span class="nuggets__reponses_number">C</span> <span class="nuggets__reponses_text">Text</span></li>
+                <li><span class="nuggets__reponses_number">D</span> <span class="nuggets__reponses_text">Text</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sel_ou_poivre" class="screen">
+        <ul>
+            <li>Julien</li>
+            <li>Stephanie</li>
+            <li>Les 2</li>
+        </ul>
+    </section>
+
+    <section id="menus" class="screen">
+        <div class="tv">
+            <ul>
+                <li><span class="menu__title">Menu</span> <span class="menu__label">Années de naissance</span></li>
+                <li><span class="menu__title">Menu</span> <span class="menu__label">Écolo/syndico/gaucho</span></li>
+                <li><span class="menu__title">Menu</span> <span class="menu__label">Le catch américain durant la golden era, un menu super intéressant mais où il faut quand même être bien calé.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="addition" class="screen">
+    </section>
+
+    <section id="burger_de_la_mort" class="screen">
+    </section>
+
+    <section id="scores" class="screen">
+        <article class="score_team">
+            <span id="score_ketchup__picture" class="score__picture"></span>
+            <span id="score_ketchup__number" class="score__number">00</span>
+        </article>
+        <article class="score_team">
+            <span id="score_mayo__picture" class="score__picture"></span>
+            <span id="score_mayo__number" class="score__number">00</span>
+        </article>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/generique.js"></script>
+    <script src="js/nuggets.js"></script>
+    <script>
+		const SCREEN_WORKFLOW = [ "scores", "video_intro", NUGGET_SCREEN, "sel_ou_poivre", "menus", "addition", "burger_de_la_mort" ];
+
+        let CURRENT_SCREEN_INDEX = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
+        let CURRENT_SCREEN = SCREEN_WORKFLOW[CURRENT_SCREEN_INDEX];
+        let CURRENT_SCORE_KETCHUP = parseInt(localStorage.getItem("scoreKetchup")) || 0;
+        let CURRENT_SCORE_MAYO = parseInt(localStorage.getItem("scoreMayo")) || 0;
+
+        showScreen(CURRENT_SCREEN);
+    </script>
+
+</body>
+</html>

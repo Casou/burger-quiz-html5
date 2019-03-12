@@ -1,0 +1,33 @@
+body.menus { background-color : #0008bd; }
+
+#menus {
+    font-size : 60px;
+    font-family: "Burger flat", serif;
+}
+
+.menu__title {
+    font-size : 70px;
+    font-family: "Burger plain", "Burger flat", serif;
+    color : #0008bd;
+    margin-right: 30px;
+}
+
+.menu__label {
+    display : none;
+}
+
+#menus ul {
+    display : flex;
+    flex-direction: column;
+    height : 100%;
+}
+
+#menus ul li {
+    display : flex;
+    align-items: center;
+    flex : 1;
+}
+
+#menus ul li:last-of-type {
+    flex : 1.5;
+}

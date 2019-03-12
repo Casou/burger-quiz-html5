@@ -1,0 +1,36 @@
+#nuggets {
+    font-size : 35px;
+    color : black;
+}
+
+#nuggets .tv {
+    display : flex;
+    flex-direction: column;
+}
+
+#nuggets__question {
+    height : 100px;
+}
+
+#nuggets__reponses {
+    display : flex;
+    flex-direction: column;
+    flex : 1;
+}
+#nuggets__reponses li {
+    display : flex;
+    flex : 1;
+    align-items: center;
+}
+
+.nuggets__reponses_number {
+    font-family: "Burger plain", "Burger flat", serif;
+    font-size : 50px;
+    margin-right: 30px;
+}
+
+.nuggets__reponses_text { display : none; }
+.nuggets__reponses_text.show { display : block; }
+
+body.ketchup .nuggets__reponses_number { color : red; }
+body.mayo .nuggets__reponses_number { color : #dcb800; }

@@ -1,0 +1,56 @@
+html {
+    background-color : black;
+    width : 100%;
+    height : 100%;
+}
+body {
+    position: absolute;
+    background-color : black;
+    font-family : "Burger flat", serif;
+    text-align : left;
+    width : 1280px;
+    height : 720px;
+    z-index: -1000;
+    border: 1px solid green;
+}
+
+@font-face {
+    font-family: 'Burger flat';
+    src: url('fonts/dimbo/dimbo_regular-webfont.woff2') format('woff2'),
+        url('fonts/dimbo/dimbo_regular-webfont.woff') format('woff'),
+        url('fonts/dimbo/dimbo_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Burger plain';
+    src: url('fonts/horsal/horsal.woff2') format('woff2'),
+        url('fonts/horsal/horsal.woff') format('woff'),
+        url('fonts/horsal/horsal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body.ketchup { background-color : red; }
+body.mayo { background-color : yellow; }
+
+* {
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style-type: none;
+    margin : 0;
+    padding : 0;
+}
+
+section.screen {
+    display : none;
+    width : 100%;
+    height : 100%;
+}
+section.screen.show {
+    display : inline-block;
+}

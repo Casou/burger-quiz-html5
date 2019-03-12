@@ -1,0 +1,21 @@
+#sel_ou_poivre {
+    font-family: "Burger plain", "Burger flat", serif;
+    font-size : 70px;
+    text-align: center;
+}
+
+#sel_ou_poivre ul {
+    display : flex;
+    flex-direction: column;
+    height : 100%;
+}
+
+#sel_ou_poivre li {
+    display : flex;
+    flex : 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#sel_ou_poivre li:nth-of-type(odd) { color : lightblue; }
+#sel_ou_poivre li:nth-of-type(even) { color : #80bfe6; }
