@@ -16,7 +16,7 @@ class Intro extends Screen {
 		this.isVideoPlayed = false;
 	}
 
-	nextAction(key) {
+	nextAction() {
 		if (!this.video.paused) {
 			return true;
 		}
@@ -29,7 +29,7 @@ class Intro extends Screen {
 		return false;
 	}
 
-	previousAction(key) {
+	previousAction() {
 		if (this.isVideoPlayed) {
 			this.isVideoPlayed = false;
 			return true;

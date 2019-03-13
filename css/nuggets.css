@@ -31,6 +31,8 @@
 
 .nuggets__reponses_text { display : none; }
 .nuggets__reponses_text.show { display : block; }
+body.ketchup .nuggets__reponses_text.good { color : red; }
+body.mayo .nuggets__reponses_text.good { color : #dcb800; }
 
 body.ketchup .nuggets__reponses_number { color : red; }
 body.mayo .nuggets__reponses_number { color : #dcb800; }

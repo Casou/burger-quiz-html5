@@ -3,27 +3,27 @@
     {
       "label" : "Question épidomiologie (à finir)",
       "responses" : [
-        { "label" : "Réponse A", "isGood" : false },
-        { "label" : "Réponse B", "isGood" : false },
+        { "label" : "Réponse A" },
+        { "label" : "Réponse B" },
         { "label" : "Réponse C", "isGood" : true },
-        { "label" : "Réponse D", "isGood" : false }
+        { "label" : "Réponse D" }
       ]
     },
     {
       "label" : "Que signifie en plongée le geste formant un cercle avec le pouce et l’index ?",
       "responses" : [
-        { "label" : "Je lui ai mis la rondelle comme ça", "isGood" : false },
-        { "label" : "Ta blague elle vaut zéro", "isGood" : false },
+        { "label" : "Je lui ai mis la rondelle comme ça" },
+        { "label" : "Ta blague elle vaut zéro" },
         { "label" : "Je vais bien tout va bien", "isGood" : true },
-        { "label" : "Vas-y, tire là-dedans avec ton harpon", "isGood" : false }
+        { "label" : "Vas-y, tire là-dedans avec ton harpon" }
       ]
     },
     {
       "label" : "Entre autres conneries, Paul-Loup Sulitzer a déclaré :",
       "responses" : [
-        { "label" : "J’ai écrit tous mes romans", "isGood" : false },
-        { "label" : "Victor Hugo et moi on joue dans la même catégorie", "isGood" : false },
-        { "label" : "Avec mes livres tu t’endors facilement", "isGood" : false },
+        { "label" : "J’ai écrit tous mes romans" },
+        { "label" : "Victor Hugo et moi on joue dans la même catégorie" },
+        { "label" : "Avec mes livres tu t’endors facilement" },
         { "label" : "Je n’ai pas un nègre, j’en ai cent", "isGood" : true }
       ]
     },
@@ -31,27 +31,27 @@
       "label" : "Laquelle de ces phrases contient toutes les lettres de l’alphabet :",
       "responses" : [
         { "label" : "Servez ce whisky aux petits juges blonds qui fument", "isGood" : true },
-        { "label" : "Goldorak a pété mon xylophone en peau de zèbre", "isGood" : false },
-        { "label" : "Zorro et Xéna la guerrière font du Kung Fu au Qatar", "isGood" : false },
-        { "label" : "Wolfgang a crié : AZTYPOKGFGMSXVBUUUUUU !!!", "isGood" : false }
+        { "label" : "Goldorak a pété mon xylophone en peau de zèbre" },
+        { "label" : "Zorro et Xéna la guerrière font du Kung Fu au Qatar" },
+        { "label" : "Wolfgang a crié : AZTYPOKGFGMSXVBUUUUUU !!!" }
       ]
     },
     {
       "label" : "Que dit-on de la truie quand elle met bas ?",
       "responses" : [
-        { "label" : "Elle porcinette", "isGood" : false },
+        { "label" : "Elle porcinette" },
         { "label" : "Elle cochonne", "isGood" : true },
-        { "label" : "Elle truite", "isGood" : false },
-        { "label" : "Elle pète", "isGood" : false }
+        { "label" : "Elle truite" },
+        { "label" : "Elle pète" }
       ]
     },
     {
       "label" : "Laquelle de ces propositions est un animal d’Australie, proche du kangourou ?",
       "responses" : [
         { "label" : "Le couscous", "isGood" : true },
-        { "label" : "Le méchoui", "isGood" : false },
-        { "label" : "Le barbecue", "isGood" : false },
-        { "label" : "Le double-cheese burger", "isGood" : false }
+        { "label" : "Le méchoui" },
+        { "label" : "Le barbecue" },
+        { "label" : "Le double-cheese burger" }
       ]
     }
 

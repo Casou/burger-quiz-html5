@@ -23,7 +23,7 @@ class Workflow {
 		this.toggleScore = this.toggleScore.bind(this);
 
 		addKeyDownCallback("n", this.nextAction, "Next action");
-		addKeyDownCallback("p", this.previousAction, "Previous action");
+		addKeyDownCallback("b", this.previousAction, "Previous action");
 
 		addKeyDownCallback("&", () => this.goToScreen(1), "1-9 Go to screen");
 		addKeyDownCallback("é", () => this.goToScreen(2));
@@ -61,9 +61,9 @@ class Workflow {
 		if (!this.currentScreen || this.paused) {
 			return;
 		}
-		if (!this.currentScreen.nextAction("n")) {
+		if (!this.currentScreen.nextAction()) {
 			this._nextScreen();
-			this.currentScreen.nextAction("n");
+			this.currentScreen.nextAction();
 		}
 	}
 
@@ -71,9 +71,9 @@ class Workflow {
 		if (!this.currentScreen || this.paused) {
 			return;
 		}
-		if (!this.currentScreen.previousAction("p")) {
+		if (!this.currentScreen.previousAction()) {
 			this._previousScreen();
-			this.currentScreen.previousAction("p");
+			this.currentScreen.previousAction();
 		}
 	}
 

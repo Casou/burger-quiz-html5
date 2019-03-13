@@ -5,7 +5,11 @@ class Screen {
 	}
 
 	isCurrentScreen() {
-		return CURRENT_SCREEN !== this.id;
+		return WORKFLOW.currentScreen.id.localeCompare(this.id) === 0;
+	}
+
+	throwCurrentScreenError() {
+		throw new Error(`Not the current screen (expected ${this.id}; actual : ${WORKFLOW.currentScreen.id})`);
 	}
 
 	nextAction(key) {
