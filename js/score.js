@@ -35,9 +35,9 @@ const formatScore = (score) => {
 
 updateScore();
 
-addKeyDownCallback("k", () => addPointsToScore(TEAM_KETCHUP, 1), "Ketchup + 1");
-addKeyDownCallback("i", () => addPointsToScore(TEAM_KETCHUP, -1), "Ketchup - 1");
-addKeyDownCallback("m", () => addPointsToScore(TEAM_MAYO, 1), "Mayo + 1");
-addKeyDownCallback("p", () => addPointsToScore(TEAM_MAYO, -1), "Mayo - 1");
+addKeyDownCallback("i", () => addPointsToScore(TEAM_KETCHUP, 1), "Ketchup + 1");
+addKeyDownCallback("k", () => addPointsToScore(TEAM_KETCHUP, -1), "Ketchup - 1");
+addKeyDownCallback("o", () => addPointsToScore(TEAM_MAYO, 1), "Mayo + 1");
+addKeyDownCallback("l", () => addPointsToScore(TEAM_MAYO, -1), "Mayo - 1");
 
 addKeyDownCallback("s", displayScore, "Score");

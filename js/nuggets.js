@@ -1,3 +1,4 @@
+const NUGGET_TRANSITION = "transition__nuggets";
 const NUGGET_SCREEN = "nuggets";
 let NUGGETS = [];
 let NUGGET_INDEX = parseInt(localStorage.getItem("nuggetIndex")) || 0;
@@ -43,6 +44,10 @@ const _displayNugget = (index) => {
 };
 
 const displayResponse = () => {
+	if (CURRENT_SCREEN !== NUGGET_SCREEN) {
+		return;
+	}
+
 	const nextAnswer = document.querySelector(".nuggets__reponses_text:not(.show)");
 	if (nextAnswer) {
 		nextAnswer.classList.add("show");

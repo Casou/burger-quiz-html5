@@ -1,4 +1,10 @@
-const SCREEN_WORKFLOW = [ INTRO_SCREEN, NUGGET_SCREEN, "sel_ou_poivre", "menus", "addition", "burger_de_la_mort" ];
+const SCREEN_WORKFLOW = [ INTRO_SCREEN,
+	NUGGET_TRANSITION, NUGGET_SCREEN,
+	"sel_ou_poivre",
+	"menus",
+	"addition",
+	"burger_de_la_mort"
+];
 
 let CURRENT_SCREEN_INDEX = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
 let CURRENT_SCREEN;

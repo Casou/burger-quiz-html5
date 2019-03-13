@@ -23,8 +23,14 @@
 <body onload="logAllCallbacks()">
 
     <section id="video_intro" class="screen hide">
-        <video preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();">
+        <video preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();" poster="resources/images/black.jpg">
             <source src="resources/videos/generique.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section id="transition__nuggets" class="screen hide">
+        <video id="nuggets_video" preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();" poster="resources/images/black.jpg">
+            <source src="resources/videos/nuggets.mp4" type="video/mp4">
         </video>
     </section>
 
