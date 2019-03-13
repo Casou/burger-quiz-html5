@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="css/menus.css">
     <link rel="stylesheet" href="css/scores.css">
 
+    <script>
+        const KEY_DOWN_CALLBACKS = [];
+    </script>
+
 </head>
 <body>
 
@@ -61,25 +65,24 @@
 
     <section id="scores" class="screen">
         <article class="score_team">
-            <span id="score_ketchup__picture" class="score__picture"></span>
-            <span id="score_ketchup__number" class="score__number">00</span>
+            <span class="score__picture score_ketchup__picture"></span>
+            <span class="score__number score_ketchup__number">00</span>
         </article>
         <article class="score_team">
-            <span id="score_mayo__picture" class="score__picture"></span>
-            <span id="score_mayo__number" class="score__number">00</span>
+            <span class="score__picture score_mayo__picture"></span>
+            <span class="score__number score_mayo__number">00</span>
         </article>
     </section>
 
     <script src="js/index.js"></script>
     <script src="js/generique.js"></script>
     <script src="js/nuggets.js"></script>
+    <script src="js/score.js"></script>
     <script>
-		const SCREEN_WORKFLOW = [ "scores", "video_intro", NUGGET_SCREEN, "sel_ou_poivre", "menus", "addition", "burger_de_la_mort" ];
+		const SCREEN_WORKFLOW = [ "video_intro", NUGGET_SCREEN, "sel_ou_poivre", "menus", "addition", "burger_de_la_mort" ];
 
         let CURRENT_SCREEN_INDEX = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
         let CURRENT_SCREEN = SCREEN_WORKFLOW[CURRENT_SCREEN_INDEX];
-        let CURRENT_SCORE_KETCHUP = parseInt(localStorage.getItem("scoreKetchup")) || 0;
-        let CURRENT_SCORE_MAYO = parseInt(localStorage.getItem("scoreMayo")) || 0;
 
         showScreen(CURRENT_SCREEN);
     </script>
