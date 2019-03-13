@@ -29,8 +29,17 @@ class Intro extends Screen {
 		return false;
 	}
 
+	previousAction(key) {
+		if (this.isVideoPlayed) {
+			this.isVideoPlayed = false;
+			return true;
+		}
+		return false;
+	}
+
 	videoEnded() {
 		this.isVideoPlayed = true;
+		this.video.src = this.video.src;
 	}
 
 }

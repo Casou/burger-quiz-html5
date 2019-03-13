@@ -12,6 +12,10 @@ class Nuggets extends Screen {
 		return false;
 	}
 
+	previousAction(key) {
+		return false;
+	}
+
 	retrieveNuggets() {
 		fetch("/nuggets.json")
 			.then(response => response.json())

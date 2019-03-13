@@ -44,18 +44,18 @@ class Workflow {
 		if (!this.currentScreen) {
 			return;
 		}
-		if (!this.currentScreen.nextAction("p")) {
+		if (!this.currentScreen.previousAction("p")) {
 			this._previousScreen();
 		}
 	}
 
 	_nextScreen() {
-		this.currentScreenIndex++;
+		this.currentScreenIndex = Math.min(this.items.length - 1, this.currentScreenIndex + 1);
 		this._updateScreen(this.currentScreenIndex);
 	}
 
 	_previousScreen() {
-		this.currentScreenIndex--;
+		this.currentScreenIndex = Math.max(0, this.currentScreenIndex - 1);
 		this._updateScreen(this.currentScreenIndex);
 	}
 

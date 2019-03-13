@@ -23,14 +23,15 @@
 <body onload="logAllCallbacks()">
 
     <section id="intro" class="screen hide">
-        <h1>Intro</h1>
-        <video id="intro__video" preload="auto" onerror="showDiscreetError('Video KO');" onended="WORKFLOW.getScreen('intro').videoEnded();" poster="resources/images/black.jpg">
-            <source src="resources/videos/generique.mp4" type="video/mp4">
-        </video>
+        <video id="intro__video" preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/generique.mp4"
+               onended="WORKFLOW.getScreen('intro').videoEnded();"
+               onerror="showDiscreetError('Video KO');"
+        />
     </section>
 
     <section id="transition__nuggets" class="screen hide">
-        <h1>Transition</h1>
         <video id="nuggets_video" preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();" poster="resources/images/black.jpg">
             <source src="resources/videos/nuggets.mp4" type="video/mp4">
         </video>

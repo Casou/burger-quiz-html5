@@ -9,4 +9,8 @@ class NuggetsTransition extends Screen {
 		return false;
 	}
 
+	previousAction(key) {
+		return false;
+	}
+
 }

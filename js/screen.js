@@ -9,6 +9,11 @@ class Screen {
 	}
 
 	nextAction(key) {
-		throw new Error("Should have been implemented");
+		throw new Error("nextAction should have been implemented");
 	}
+
+	previousAction(key) {
+		throw new Error("previousAction should have been implemented");
+	}
+
 }
