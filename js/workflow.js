@@ -6,8 +6,11 @@ class Workflow {
 			new NuggetsTransition(),
 			new Nuggets()
 		];
+		this.score = new Score();
+
 		this.currentScreenIndex = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
 		this.currentScreen = this.items[this.currentScreenIndex];
+		this.paused = false;
 
 		this.getScreen = this.getScreen.bind(this);
 		this.goToScreen = this.goToScreen.bind(this);
@@ -17,6 +20,7 @@ class Workflow {
 		this._nextScreen = this._nextScreen.bind(this);
 		this._previousScreen = this._previousScreen.bind(this);
 		this._updateScreen = this._updateScreen.bind(this);
+		this.toggleScore = this.toggleScore.bind(this);
 
 		addKeyDownCallback("n", this.nextAction, "Next action");
 		addKeyDownCallback("p", this.previousAction, "Previous action");
@@ -30,6 +34,8 @@ class Workflow {
 		addKeyDownCallback("è", () => this.goToScreen(7));
 		addKeyDownCallback("_", () => this.goToScreen(8));
 		addKeyDownCallback("ç", () => this.goToScreen(9));
+
+		addKeyDownCallback("s", this.toggleScore, "Score");
 
 		this.showScreen(this.currentScreen);
 	}
@@ -52,7 +58,7 @@ class Workflow {
 	};
 
 	nextAction() {
-		if (!this.currentScreen) {
+		if (!this.currentScreen || this.paused) {
 			return;
 		}
 		if (!this.currentScreen.nextAction("n")) {
@@ -62,7 +68,7 @@ class Workflow {
 	}
 
 	previousAction() {
-		if (!this.currentScreen) {
+		if (!this.currentScreen || this.paused) {
 			return;
 		}
 		if (!this.currentScreen.previousAction("p")) {
@@ -85,6 +91,12 @@ class Workflow {
 		localStorage.setItem("currentScreenIndex", index + "");
 		this.currentScreen = this.items[index];
 		this.showScreen(this.currentScreen);
+	}
+
+	toggleScore() {
+		this.paused = !this.paused;
+		this.paused && this.showScreen({ id : this.score.id });
+		!this.paused && this.showScreen(this.currentScreen);
 	}
 
 }
