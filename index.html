@@ -16,30 +16,31 @@
 
     <script>
         const KEY_DOWN_CALLBACKS = [];
+        const SCREEN_CALLBACKS = [];
     </script>
 
 </head>
-<body>
+<body onload="logAllCallbacks()">
 
-    <section id="video_intro" class="screen">
+    <section id="video_intro" class="screen hide">
         <video preload="auto" onerror="generiqueEnded();" onended="generiqueEnded();">
             <source src="resources/videos/generique.mp4" type="video/mp4">
         </video>
     </section>
 
-    <section id="nuggets" class="screen">
+    <section id="nuggets" class="screen hide">
         <div class="tv">
-            <p id="nuggets__question">Question</p>
+            <p id="nuggets__question"></p>
             <ul id="nuggets__reponses">
-                <li><span class="nuggets__reponses_number">A</span> <span class="nuggets__reponses_text">Text</span></li>
-                <li><span class="nuggets__reponses_number">B</span> <span class="nuggets__reponses_text">Text</span></li>
-                <li><span class="nuggets__reponses_number">C</span> <span class="nuggets__reponses_text">Text</span></li>
-                <li><span class="nuggets__reponses_number">D</span> <span class="nuggets__reponses_text">Text</span></li>
+                <li><span class="nuggets__reponses_number">A</span> <span class="nuggets__reponses_text"></span></li>
+                <li><span class="nuggets__reponses_number">B</span> <span class="nuggets__reponses_text"></span></li>
+                <li><span class="nuggets__reponses_number">C</span> <span class="nuggets__reponses_text"></span></li>
+                <li><span class="nuggets__reponses_number">D</span> <span class="nuggets__reponses_text"></span></li>
             </ul>
         </div>
     </section>
 
-    <section id="sel_ou_poivre" class="screen">
+    <section id="sel_ou_poivre" class="screen hide">
         <ul>
             <li>Julien</li>
             <li>Stephanie</li>
@@ -47,7 +48,7 @@
         </ul>
     </section>
 
-    <section id="menus" class="screen">
+    <section id="menus" class="screen hide">
         <div class="tv">
             <ul>
                 <li><span class="menu__title">Menu</span> <span class="menu__label">Années de naissance</span></li>
@@ -57,13 +58,13 @@
         </div>
     </section>
 
-    <section id="addition" class="screen">
+    <section id="addition" class="screen hide">
     </section>
 
-    <section id="burger_de_la_mort" class="screen">
+    <section id="burger_de_la_mort" class="screen hide">
     </section>
 
-    <section id="scores" class="screen">
+    <section id="scores" class="screen hide">
         <article class="score_team">
             <span class="score__picture score_ketchup__picture"></span>
             <span class="score__number score_ketchup__number">00</span>
@@ -75,17 +76,12 @@
     </section>
 
     <script src="js/index.js"></script>
+    <script src="js/intro.js"></script>
     <script src="js/generique.js"></script>
     <script src="js/nuggets.js"></script>
     <script src="js/score.js"></script>
-    <script>
-		const SCREEN_WORKFLOW = [ "video_intro", NUGGET_SCREEN, "sel_ou_poivre", "menus", "addition", "burger_de_la_mort" ];
 
-        let CURRENT_SCREEN_INDEX = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
-        let CURRENT_SCREEN = SCREEN_WORKFLOW[CURRENT_SCREEN_INDEX];
-
-        showScreen(CURRENT_SCREEN);
-    </script>
+    <script src="js/screen.js"></script>
 
 </body>
 </html>

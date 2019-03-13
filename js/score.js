@@ -3,6 +3,10 @@ const TEAM_MAYO = "scoreMayo";
 let CURRENT_SCORE_KETCHUP = parseInt(localStorage.getItem(TEAM_KETCHUP)) || 0;
 let CURRENT_SCORE_MAYO = parseInt(localStorage.getItem(TEAM_MAYO)) || 0;
 
+const displayScore = () => {
+	showScreen("scores");
+};
+
 const updateScore = () => {
 	document.querySelectorAll(".score_ketchup__number").forEach(elt => {
 		elt.innerHTML = formatScore(CURRENT_SCORE_KETCHUP);
@@ -25,9 +29,15 @@ const addPointsToScore = (team, points) => {
 	updateScore();
 };
 
+const formatScore = (score) => {
+	return score >= 10 ? score + "" : "0" + score;
+};
+
 updateScore();
 
 addKeyDownCallback("k", () => addPointsToScore(TEAM_KETCHUP, 1), "Ketchup + 1");
 addKeyDownCallback("i", () => addPointsToScore(TEAM_KETCHUP, -1), "Ketchup - 1");
 addKeyDownCallback("m", () => addPointsToScore(TEAM_MAYO, 1), "Mayo + 1");
 addKeyDownCallback("p", () => addPointsToScore(TEAM_MAYO, -1), "Mayo - 1");
+
+addKeyDownCallback("s", displayScore, "Score");
