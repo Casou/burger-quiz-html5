@@ -36,6 +36,10 @@ body {
 body.ketchup { background-color : red; }
 body.mayo { background-color : yellow; }
 
+h1 {
+    color : white;
+}
+
 * {
     box-sizing: border-box;
 }
