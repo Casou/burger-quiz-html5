@@ -9,7 +9,9 @@ const addKeyDownCallback = (key, callback, description) => {
 const logAllCallbacks = () => {
 	console.group("Key callbacks");
 	Object.keys(KEY_DOWN_CALLBACKS).forEach(letter => {
-		console.log(letter, KEY_DOWN_CALLBACKS[letter].description);
+		KEY_DOWN_CALLBACKS[letter].description && console.log(letter, KEY_DOWN_CALLBACKS[letter].description);
 	});
 	console.groupEnd();
 };
+
+addKeyDownCallback("a", () => localStorage.clear(), "Clear");

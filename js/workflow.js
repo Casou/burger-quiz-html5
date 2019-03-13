@@ -9,6 +9,8 @@ class Workflow {
 		this.currentScreenIndex = parseInt(localStorage.getItem("currentScreenIndex")) || 0;
 		this.currentScreen = this.items[this.currentScreenIndex];
 
+		this.getScreen = this.getScreen.bind(this);
+		this.goToScreen = this.goToScreen.bind(this);
 		this.showScreen = this.showScreen.bind(this);
 		this.nextAction = this.nextAction.bind(this);
 		this.previousAction = this.previousAction.bind(this);
@@ -19,11 +21,29 @@ class Workflow {
 		addKeyDownCallback("n", this.nextAction, "Next action");
 		addKeyDownCallback("p", this.previousAction, "Previous action");
 
+		addKeyDownCallback("&", () => this.goToScreen(1), "1-9 Go to screen");
+		addKeyDownCallback("é", () => this.goToScreen(2));
+		addKeyDownCallback("\"", () => this.goToScreen(3));
+		addKeyDownCallback("'", () => this.goToScreen(4));
+		addKeyDownCallback("(", () => this.goToScreen(5));
+		addKeyDownCallback("-", () => this.goToScreen(6));
+		addKeyDownCallback("è", () => this.goToScreen(7));
+		addKeyDownCallback("_", () => this.goToScreen(8));
+		addKeyDownCallback("ç", () => this.goToScreen(9));
+
 		this.showScreen(this.currentScreen);
 	}
 
 	getScreen(id) {
 		return this.items.find(screen => screen.id === id);
+	}
+
+	goToScreen(index) {
+		if (index > this.items.length) {
+			return;
+		}
+		this.currentScreenIndex = Math.max(0, index - 1);
+		this._updateScreen(this.currentScreenIndex);
 	}
 
 	showScreen(screen) {
@@ -37,6 +57,7 @@ class Workflow {
 		}
 		if (!this.currentScreen.nextAction("n")) {
 			this._nextScreen();
+			this.currentScreen.nextAction("n");
 		}
 	}
 
@@ -46,6 +67,7 @@ class Workflow {
 		}
 		if (!this.currentScreen.previousAction("p")) {
 			this._previousScreen();
+			this.currentScreen.previousAction("p");
 		}
 	}
 
