@@ -15,7 +15,6 @@ body {
     height : 720px;
     margin-top : -360px;
     z-index: -1000;
-    border: 1px solid #002000;
 }
 
 @font-face {
