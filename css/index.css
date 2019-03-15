@@ -66,3 +66,22 @@ video {
     width: 100%;
     height: 100%;
 }
+
+#errorSnicker {
+    position : absolute;
+    bottom : 10px;
+    right : 10px;
+    padding : 8px 15px;
+    min-width : 200px;
+    max-width : 350px;
+    border-radius : 4px;
+    background-color: #7a0000;
+    font-family : serif;
+    font-size : 16px;
+    text-align : center;
+    color : white;
+}
+
+#errorSnicker.hide {
+    display : none;
+}

@@ -4,7 +4,9 @@ class Workflow {
 		this.items = [
 			new Intro(),
 			new NuggetsTransition(),
-			new Nuggets()
+			new Nuggets(),
+			new SelOuPoivreTransition(),
+			new SelOuPoivre()
 		];
 		this.score = new Score();
 
