@@ -3,13 +3,14 @@ class Workflow {
 	constructor() {
 		this.items = [
 			new Intro(),
+			new CadeauxIntro(),
 			new NuggetsIntro(),
 			new Nuggets(),
 			new SelOuPoivreIntro(),
 			new SelOuPoivre(),
 			new MenusIntro(),
 			new Menus(),
-			new AdditionTransition(),
+			new AdditionIntro(),
 			new Addition(),
 			new BurgerDeLaMortIntro(),
 			new BurgerDeLaMort()

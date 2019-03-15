@@ -1,7 +1,7 @@
 class NuggetsIntro extends AbstractIntro {
 
 	constructor() {
-		super("transition__nuggets", "nuggets__video");
+		super("intro__nuggets", "nuggets__video");
 	}
 
 	init() {

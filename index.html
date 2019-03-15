@@ -18,6 +18,11 @@
 
     <script>
         const KEY_DOWN_CALLBACKS = [];
+
+        /*
+        - Générique et intro : https://www.youtube.com/watch?v=ZK2-rB1cR04
+        - Génériques audio prolongés : https://www.youtube.com/watch?v=8p3f6S1njhU
+         */
     </script>
 
 </head>
@@ -33,12 +38,22 @@
         />
     </section>
 
-    <section id="transition__nuggets" class="screen hide">
+    <section id="cadeaux" class="screen hide">
+        <video id="cadeaux__video"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/cadeaux.mp4"
+               onended="WORKFLOW.getScreen('intro__nuggets').videoEnded();"
+               onerror="showDiscreetError('Video KO');"
+        />
+    </section>
+
+    <section id="intro__nuggets" class="screen hide">
         <video id="nuggets__video"
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/nuggets.mp4"
-               onended="WORKFLOW.getScreen('transition__nuggets').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__nuggets').videoEnded();"
                onerror="showDiscreetError('Video KO');"
         />
     </section>
@@ -55,12 +70,12 @@
         </div>
     </section>
 
-    <section id="transition__sel_ou_poivre" class="screen hide">
+    <section id="intro__sel_ou_poivre" class="screen hide">
         <video id="sel_ou_poivre__video"
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/sel_ou_poivre.mp4"
-               onended="WORKFLOW.getScreen('transition__sel_ou_poivre').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__sel_ou_poivre').videoEnded();"
                onerror="showDiscreetError('Video KO');"
         />
     </section>
@@ -74,12 +89,12 @@
         </ul>
     </section>
 
-    <section id="transition__menu" class="screen hide">
+    <section id="intro__menu" class="screen hide">
         <video id="menu__video"
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/menus.mp4"
-               onended="WORKFLOW.getScreen('transition__menu').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__menu').videoEnded();"
                onerror="showDiscreetError('Video KO');"
         />
     </section>
@@ -94,12 +109,12 @@
         </div>
     </section>
 
-    <section id="transition__addition" class="screen hide">
+    <section id="intro__addition" class="screen hide">
         <video id="addition__video"
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/addition.mp4"
-               onended="WORKFLOW.getScreen('transition__addition').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__addition').videoEnded();"
                onerror="showDiscreetError('Video KO');"
         />
     </section>
@@ -109,12 +124,12 @@
         <h2 class="hide">Toutes les reponses commencent par S</h2>
     </section>
 
-    <section id="transition__burger_de_la_mort" class="screen hide">
+    <section id="intro__burger_de_la_mort" class="screen hide">
         <video id="burger_de_la_mort__video"
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/burger_de_la_mort.mp4"
-               onended="WORKFLOW.getScreen('transition__burger_de_la_mort').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__burger_de_la_mort').videoEnded();"
                onerror="showDiscreetError('Video KO');"
         />
     </section>
@@ -146,6 +161,7 @@
     <script src="js/abstract.intro.js"></script>
 
     <script src="js/intro.js"></script>
+    <script src="js/cadeaux.intro.js"></script>
     <script src="js/nuggets.js"></script>
     <script src="js/nuggets.intro.js"></script>
     <script src="js/selOuPoivre.js"></script>
@@ -153,7 +169,7 @@
     <script src="js/menus.js"></script>
     <script src="js/menus.intro.js"></script>
     <script src="js/addition.js"></script>
-    <script src="js/addition.transition.js"></script>
+    <script src="js/addition.intro.js"></script>
     <script src="js/burgerDeLaMort.js"></script>
     <script src="js/burgerDeLaMort.intro.js"></script>
     <script src="js/score.js"></script>

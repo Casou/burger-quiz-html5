@@ -1,7 +1,7 @@
 class MenusIntro extends AbstractIntro {
 
 	constructor() {
-		super("transition__menu", "menu__video");
+		super("intro__menu", "menu__video");
 	}
 
 }
