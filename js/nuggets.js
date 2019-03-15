@@ -5,7 +5,9 @@ class Nuggets extends Screen {
 		this.id = "nuggets";
 		this.nuggets = [];
 		this.nuggets_index = parseInt(localStorage.getItem("nuggetIndex")) || 0;
+		this.goodAnswerShown = false;
 
+		this.init = this.init.bind(this);
 		this.nextAction = this.nextAction.bind(this);
 		this.previousAction = this.previousAction.bind(this);
 		this._displayNugget = this._displayNugget.bind(this);
@@ -16,19 +18,25 @@ class Nuggets extends Screen {
 
 		addKeyDownCallback("r", this._nextResponse, "Nuggets response");
 		addKeyDownCallback("g", this._goodAnswer, "Nuggets good response");
+	}
 
-		this.retrieveNuggets()
-			.then(() => this._displayNugget(this.nuggets_index));
+	init() {
+		this._displayNugget(this.nuggets_index);
+	}
+
+	load() {
+		return this.retrieveNuggets();
 	}
 
 	nextAction() {
+		if (this._nextResponse() || !this.goodAnswerShown) {
+			return true;
+		}
+
 		if (this._nextNugget()) {
 			return true;
 		}
 
-		const body = document.getElementsByTagName("body")[0];
-		body.classList.remove("ketchup");
-		body.classList.remove("mayo");
 		return false;
 	}
 
@@ -36,10 +44,6 @@ class Nuggets extends Screen {
 		if (this._previousNugget()) {
 			return true;
 		}
-
-		const body = document.getElementsByTagName("body")[0];
-		body.classList.remove("ketchup");
-		body.classList.remove("mayo");
 		return false;
 	}
 
@@ -62,6 +66,8 @@ class Nuggets extends Screen {
 		this.nuggets_index++;
 		this._displayNugget(this.nuggets_index);
 		localStorage.setItem("nuggetIndex", this.nuggets_index);
+
+		this.goodAnswerShown = false;
 
 		return true;
 	};
@@ -127,6 +133,8 @@ class Nuggets extends Screen {
 
 		const goodAnswer = document.getElementById("nuggets__reponses_" + answer.index);
 		goodAnswer.classList.add("good");
+
+		this.goodAnswerShown = true;
 	};
 
 }

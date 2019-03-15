@@ -1,37 +1,7 @@
-class NuggetsTransition extends Screen {
+class NuggetsTransition extends Transition {
 
 	constructor() {
-		super();
-		this.id = "transition__nuggets";
-
-		this.video = document.getElementById("nuggets__video");
-		this.isVideoPlayed = false;
-	}
-
-	nextAction() {
-		if (!this.video.paused) {
-			return true;
-		}
-
-		if (!this.isVideoPlayed) {
-			this.video.play();
-			return true;
-		}
-
-		return false;
-	}
-
-	previousAction() {
-		if (this.isVideoPlayed) {
-			this.isVideoPlayed = false;
-			return true;
-		}
-		return false;
-	}
-
-	videoEnded() {
-		this.isVideoPlayed = true;
-		this.video.src = this.video.src;
+		super("transition__nuggets", "nuggets__video");
 	}
 
 }

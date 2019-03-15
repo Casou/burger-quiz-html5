@@ -12,6 +12,14 @@ class Screen {
 		throw new Error(`Not the current screen (expected ${this.id}; actual : ${WORKFLOW.currentScreen.id})`);
 	}
 
+	load() {
+		return Promise.resolve();
+	}
+
+	init() {
+		throw new Error("init should have been implemented");
+	}
+
 	nextAction(key) {
 		throw new Error("nextAction should have been implemented");
 	}

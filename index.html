@@ -33,7 +33,7 @@
     </section>
 
     <section id="transition__nuggets" class="screen hide">
-        <h1>Transition</h1>
+        <h1>Transition Nuggets</h1>
         <video id="nuggets__video"
                preload="auto"
                poster="resources/images/black.jpg"
@@ -53,6 +53,17 @@
                 <li><span class="nuggets__reponses_number">D</span> <span id="nuggets__reponses_3" class="nuggets__reponses_text"></span></li>
             </ul>
         </div>
+    </section>
+
+    <section id="transition__sel_ou_poivre" class="screen hide">
+        <h1>Transition sel ou poivre</h1>
+        <video id="sel_ou_poivre__video"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/sel_ou_poivre.mp4"
+               onended="WORKFLOW.getScreen('transition__sel_ou_poivre').videoEnded();"
+               onerror="showDiscreetError('Video KO');"
+        />
     </section>
 
     <section id="sel_ou_poivre" class="screen hide">
@@ -95,6 +106,7 @@
 
     <script src="js/screen.js"></script>
     <script src="js/workflow.js"></script>
+    <script src="js/transition.js"></script>
 
     <script src="js/intro.js"></script>
     <script src="js/nuggets.js"></script>

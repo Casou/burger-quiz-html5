@@ -37,7 +37,12 @@ class Workflow {
 
 		addKeyDownCallback("s", this.toggleScore, "Score");
 
-		this.showScreen(this.currentScreen);
+		Promise.all(
+			this.items.map(item => item.load())
+		).then(() => {
+			this.currentScreen.init();
+			this.showScreen(this.currentScreen);
+		});
 	}
 
 	getScreen(id) {
@@ -63,7 +68,6 @@ class Workflow {
 		}
 		if (!this.currentScreen.nextAction()) {
 			this._nextScreen();
-			this.currentScreen.nextAction();
 		}
 	}
 
@@ -90,6 +94,12 @@ class Workflow {
 	_updateScreen(index) {
 		localStorage.setItem("currentScreenIndex", index + "");
 		this.currentScreen = this.items[index];
+
+		const body = document.getElementsByTagName("body")[0];
+		body.classList.remove("ketchup");
+		body.classList.remove("mayo");
+
+		this.currentScreen.init();
 		this.showScreen(this.currentScreen);
 	}
 
