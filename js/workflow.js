@@ -96,6 +96,7 @@ class Workflow {
 		const body = document.getElementsByTagName("body")[0];
 		body.classList.remove("ketchup");
 		body.classList.remove("mayo");
+		body.classList.remove("menus");
 
 		this.currentScreen.init();
 		showScreen(this.currentScreen.id);
