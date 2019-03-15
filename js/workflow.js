@@ -6,7 +6,9 @@ class Workflow {
 			new NuggetsTransition(),
 			new Nuggets(),
 			new SelOuPoivreTransition(),
-			new SelOuPoivre()
+			new SelOuPoivre(),
+			new MenusTransition(),
+			new Menus()
 		];
 		this.score = new Score();
 
@@ -16,7 +18,6 @@ class Workflow {
 
 		this.getScreen = this.getScreen.bind(this);
 		this.goToScreen = this.goToScreen.bind(this);
-		this.showScreen = this.showScreen.bind(this);
 		this.nextAction = this.nextAction.bind(this);
 		this.previousAction = this.previousAction.bind(this);
 		this._nextScreen = this._nextScreen.bind(this);
@@ -43,7 +44,7 @@ class Workflow {
 			this.items.map(item => item.load())
 		).then(() => {
 			this.currentScreen.init();
-			this.showScreen(this.currentScreen);
+			showScreen(this.currentScreen.id);
 		});
 	}
 
@@ -58,11 +59,6 @@ class Workflow {
 		this.currentScreenIndex = Math.max(0, index - 1);
 		this._updateScreen(this.currentScreenIndex);
 	}
-
-	showScreen(screen) {
-		document.querySelectorAll(".screen").forEach(section => section.classList.add("hide"));
-		document.getElementById(screen.id).classList.remove("hide");
-	};
 
 	nextAction() {
 		if (!this.currentScreen || this.paused) {
@@ -102,13 +98,13 @@ class Workflow {
 		body.classList.remove("mayo");
 
 		this.currentScreen.init();
-		this.showScreen(this.currentScreen);
+		showScreen(this.currentScreen.id);
 	}
 
 	toggleScore() {
 		this.paused = !this.paused;
-		this.paused && this.showScreen({ id : this.score.id });
-		!this.paused && this.showScreen(this.currentScreen);
+		this.paused && showScreen(this.score.id);
+		!this.paused && showScreen(this.currentScreen.id);
 	}
 
 }

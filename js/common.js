@@ -6,3 +6,8 @@ const showDiscreetError = (text) => {
 		snicker.classList.add("hide");
 	}, 5000);
 };
+
+const showScreen = (screenId) => {
+	document.querySelectorAll(".screen").forEach(section => section.classList.add("hide"));
+	document.getElementById(screenId).classList.remove("hide");
+};

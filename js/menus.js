@@ -1,4 +1,4 @@
-class SelOuPoivre extends Screen {
+class Menus extends Screen {
 
 	constructor() {
 		super();
