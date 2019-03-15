@@ -10,7 +10,9 @@ class Workflow {
 			new MenusTransition(),
 			new Menus(),
 			new AdditionTransition(),
-			new Addition()
+			new Addition(),
+			new BurgerDeLaMortTransition(),
+			new BurgerDeLaMort()
 		];
 		this.score = new Score();
 
