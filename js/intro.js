@@ -1,4 +1,4 @@
-class Intro extends Transition {
+class Intro extends AbstractIntro {
 
 	constructor() {
 		super("intro", "intro__video");

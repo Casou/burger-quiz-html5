@@ -3,15 +3,15 @@ class Workflow {
 	constructor() {
 		this.items = [
 			new Intro(),
-			new NuggetsTransition(),
+			new NuggetsIntro(),
 			new Nuggets(),
-			new SelOuPoivreTransition(),
+			new SelOuPoivreIntro(),
 			new SelOuPoivre(),
-			new MenusTransition(),
+			new MenusIntro(),
 			new Menus(),
 			new AdditionTransition(),
 			new Addition(),
-			new BurgerDeLaMortTransition(),
+			new BurgerDeLaMortIntro(),
 			new BurgerDeLaMort()
 		];
 		this.score = new Score();

@@ -1,4 +1,4 @@
-class Transition extends Screen {
+class AbstractIntro extends Screen {
 
 	constructor(idSection, idVideo) {
 		super();

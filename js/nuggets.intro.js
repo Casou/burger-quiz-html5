@@ -1,4 +1,4 @@
-class NuggetsTransition extends Transition {
+class NuggetsIntro extends AbstractIntro {
 
 	constructor() {
 		super("transition__nuggets", "nuggets__video");
