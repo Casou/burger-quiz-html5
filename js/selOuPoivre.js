@@ -10,6 +10,12 @@ class SelOuPoivre extends Screen {
 	}
 
 	nextAction() {
+		const nextAnswer = document.querySelector("#sel_ou_poivre li.hide");
+		if (nextAnswer) {
+			nextAnswer.classList.remove("hide");
+			return true;
+		}
+
 		return false;
 	}
 

@@ -54,7 +54,6 @@
     </section>
 
     <section id="transition__sel_ou_poivre" class="screen hide">
-        <h1>Transition sel ou poivre</h1>
         <video id="sel_ou_poivre__video"
                preload="auto"
                poster="resources/images/black.jpg"
@@ -65,11 +64,23 @@
     </section>
 
     <section id="sel_ou_poivre" class="screen hide">
+        <h1>Sel ou poivre</h1>
         <ul>
-            <li>Julien</li>
-            <li>Stephanie</li>
-            <li>Les 2</li>
+            <li class="hide">Julien</li>
+            <li class="hide">Stephanie</li>
+            <li class="hide">Les 2</li>
         </ul>
+    </section>
+
+
+    <section id="transition__menu" class="screen hide">
+        <video id="menu__video"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/menus.mp4"
+               onended="WORKFLOW.getScreen('transition__menu').videoEnded();"
+               onerror="showDiscreetError('Video KO');"
+        />
     </section>
 
     <section id="menus" class="screen hide">
@@ -115,6 +126,8 @@
     <script src="js/nuggets.transition.js"></script>
     <script src="js/selOuPoivre.js"></script>
     <script src="js/selOuPoivre.transition.js"></script>
+    <script src="js/menus.js"></script>
+    <script src="js/menus.transition.js"></script>
     <script src="js/score.js"></script>
 
 

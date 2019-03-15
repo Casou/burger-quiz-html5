@@ -4,10 +4,22 @@
     text-align: center;
 }
 
+#sel_ou_poivre h1 {
+    display : flex;
+    font-weight: normal;
+    margin : 0;
+    padding : 0;
+    color : #558de6;
+    height : 25%;
+    width : 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 #sel_ou_poivre ul {
     display : flex;
     flex-direction: column;
-    height : 100%;
+    height : 75%;
 }
 
 #sel_ou_poivre li {
@@ -15,6 +27,10 @@
     flex : 1;
     align-items: center;
     justify-content: center;
+    font-size : 90px;
+}
+#sel_ou_poivre li.hide {
+    opacity : 0;
 }
 
 #sel_ou_poivre li:nth-of-type(odd) { color : lightblue; }
