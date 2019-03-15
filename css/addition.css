@@ -1,0 +1,32 @@
+#addition {
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    flex-direction: column;
+    height : 100%;
+    font-family: "Burger plain", "Burger flat", serif;
+    text-align: center;
+}
+
+#addition h1, #addition h2 {
+    display : flex;
+    align-items : center;
+    justify-content: center;
+}
+
+#addition h1 {
+    flex : 1;
+    color : #558de6;
+    font-size : 80px;
+}
+
+#addition h2 {
+    flex : 3;
+    font-size : 60px;
+    color : #80bfe6;
+}
+
+#addition .hide {
+    opacity : 0;
+}
+

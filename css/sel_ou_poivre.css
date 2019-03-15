@@ -1,12 +1,11 @@
 #sel_ou_poivre {
     font-family: "Burger plain", "Burger flat", serif;
-    font-size : 70px;
+    font-size : 80px;
     text-align: center;
 }
 
 #sel_ou_poivre h1 {
     display : flex;
-    font-weight: normal;
     margin : 0;
     padding : 0;
     color : #558de6;
@@ -27,7 +26,7 @@
     flex : 1;
     align-items: center;
     justify-content: center;
-    font-size : 90px;
+    font-size : 70px;
 }
 #sel_ou_poivre li.hide {
     opacity : 0;

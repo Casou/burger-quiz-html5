@@ -8,7 +8,9 @@ class Workflow {
 			new SelOuPoivreTransition(),
 			new SelOuPoivre(),
 			new MenusTransition(),
-			new Menus()
+			new Menus(),
+			new AdditionTransition(),
+			new Addition()
 		];
 		this.score = new Score();
 
