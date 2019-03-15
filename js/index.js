@@ -14,4 +14,7 @@ const logAllCallbacks = () => {
 	console.groupEnd();
 };
 
-addKeyDownCallback("a", () => localStorage.clear(), "Clear");
+addKeyDownCallback("a", () => {
+	localStorage.clear();
+	window.location.reload();
+}, "Clear");

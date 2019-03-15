@@ -4,4 +4,8 @@ class NuggetsTransition extends Transition {
 		super("transition__nuggets", "nuggets__video");
 	}
 
+	init() {
+		this.video.play();
+	}
+
 }
