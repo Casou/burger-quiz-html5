@@ -41,10 +41,10 @@ class Score {
 	addPointsToScore(team, points) {
 		let score;
 		if (team === TEAM_KETCHUP) {
-			score = this.scoreKetchup + points;
+			score = updateScore(this.scoreKetchup, points);
 			this.scoreKetchup = score;
 		} else {
-			score = this.scoreMayo + points;
+			score = updateScore(this.scoreMayo, points)
 			this.scoreMayo = score;
 		}
 		localStorage.setItem(team, score + "");
@@ -55,5 +55,16 @@ class Score {
 
 const formatScore = (score) => {
 	return score >= 10 ? score + "" : "0" + score;
+};
+
+const updateScore = (score, points) => {
+	let updatedScore = score;
+	updatedScore += points;
+	if (updatedScore < 0) {
+		updatedScore = 0;
+	} else if (updatedScore > 25) {
+		updatedScore = 25;
+	}
+	return updatedScore;
 };
 
