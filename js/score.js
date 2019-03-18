@@ -20,12 +20,22 @@ class Score {
 	}
 
 	updateScore() {
-		document.querySelectorAll(".score_ketchup__number").forEach(elt => {
-			elt.innerHTML = formatScore(this.scoreKetchup);
+		document.querySelectorAll(".score_ketchup__number").forEach(elt => { elt.innerHTML = formatScore(this.scoreKetchup); });
+		document.querySelectorAll(".score_mayo__number").forEach(elt => { elt.innerHTML = formatScore(this.scoreMayo); });
+
+		document.querySelectorAll(".score_ketchup__picture").forEach(elt => {
+			for (let i = 0; i <= 25; i++) {
+				elt.classList.remove("pt" + i);
+			}
+			elt.classList.add("pt" + this.scoreKetchup);
 		});
-		document.querySelectorAll(".score_mayo__number").forEach(elt => {
-			elt.innerHTML = formatScore(this.scoreMayo);
+		document.querySelectorAll(".score_mayo__picture").forEach(elt => {
+			for (let i = 0; i <= 25; i++) {
+				elt.classList.remove("pt" + i);
+			}
+			elt.classList.add("pt" + this.scoreMayo);
 		});
+
 	};
 
 	addPointsToScore(team, points) {

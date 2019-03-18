@@ -8,12 +8,39 @@
 }
 
 .score__picture {
-    background: url("../resources/images/score-25.jpg") no-repeat center center;
-    background-size: contain;
+    background-size: contain !important;
     position: absolute;
     height : 100%;
     width : 100%;
 }
+
+.score__picture.pt0	{ background: url('../resources/images/score-0.jpg') no-repeat center center; }
+.score__picture.pt1	{ background: url('../resources/images/score-1.jpg') no-repeat center center; }
+.score__picture.pt2	{ background: url('../resources/images/score-2.jpg') no-repeat center center; }
+.score__picture.pt3	{ background: url('../resources/images/score-3.jpg') no-repeat center center; }
+.score__picture.pt4	{ background: url('../resources/images/score-4.jpg') no-repeat center center; }
+.score__picture.pt5	{ background: url('../resources/images/score-5.jpg') no-repeat center center; }
+.score__picture.pt6	{ background: url('../resources/images/score-6.jpg') no-repeat center center; }
+.score__picture.pt7	{ background: url('../resources/images/score-7.jpg') no-repeat center center; }
+.score__picture.pt8	{ background: url('../resources/images/score-8.jpg') no-repeat center center; }
+.score__picture.pt9	{ background: url('../resources/images/score-9.jpg') no-repeat center center; }
+.score__picture.pt10	{ background: url('../resources/images/score-10.jpg') no-repeat center center; }
+.score__picture.pt11	{ background: url('../resources/images/score-11.jpg') no-repeat center center; }
+.score__picture.pt12	{ background: url('../resources/images/score-12.jpg') no-repeat center center; }
+.score__picture.pt13	{ background: url('../resources/images/score-13.jpg') no-repeat center center; }
+.score__picture.pt14	{ background: url('../resources/images/score-14.jpg') no-repeat center center; }
+.score__picture.pt15	{ background: url('../resources/images/score-15.jpg') no-repeat center center; }
+.score__picture.pt16	{ background: url('../resources/images/score-16.jpg') no-repeat center center; }
+.score__picture.pt17	{ background: url('../resources/images/score-17.jpg') no-repeat center center; }
+.score__picture.pt18	{ background: url('../resources/images/score-18.jpg') no-repeat center center; }
+.score__picture.pt19	{ background: url('../resources/images/score-19.jpg') no-repeat center center; }
+.score__picture.pt20	{ background: url('../resources/images/score-20.jpg') no-repeat center center; }
+.score__picture.pt21	{ background: url('../resources/images/score-21.jpg') no-repeat center center; }
+.score__picture.pt22	{ background: url('../resources/images/score-22.jpg') no-repeat center center; }
+.score__picture.pt23	{ background: url('../resources/images/score-23.jpg') no-repeat center center; }
+.score__picture.pt24	{ background: url('../resources/images/score-24.jpg') no-repeat center center; }
+.score__picture.pt25	{ background: url('../resources/images/score-25.jpg') no-repeat center center; }
+
 
 .score__number {
     position: absolute;
