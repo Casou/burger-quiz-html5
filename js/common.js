@@ -1,5 +1,5 @@
 const showDiscreetError = (text) => {
-	const snicker = document.getElementById("errorSnicker");
+	const snicker = document.getElementById("errorSnackBar");
 	snicker.innerHTML = text;
 	snicker.classList.remove("hide");
 	setTimeout(() => {

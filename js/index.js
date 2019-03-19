@@ -14,7 +14,14 @@ const logAllCallbacks = () => {
 	console.groupEnd();
 };
 
+
 addKeyDownCallback("a", () => {
 	localStorage.clear();
 	window.location.reload();
 }, "Clear");
+
+addKeyDownCallback("f", () => {
+	document.querySelectorAll(".screen__name").forEach(elt => {
+		elt.classList.toggle("hide");
+	});
+}, "Show screen name");
