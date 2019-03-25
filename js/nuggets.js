@@ -59,11 +59,13 @@ class Nuggets extends Screen {
 		if (!this.isCurrentScreen()) {
 			this.throwCurrentScreenError();
 		}
+
+		this.nuggets_index++;
+
 		if (this.nuggets_index >= this.nuggets.length) {
 			return false;
 		}
 
-		this.nuggets_index++;
 		this._displayNugget(this.nuggets_index);
 		localStorage.setItem("nuggetIndex", this.nuggets_index);
 
