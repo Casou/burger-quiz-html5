@@ -1,4 +1,4 @@
-class AbstractIntro extends Screen {
+class VideoScreen extends Screen {
 
 	constructor(idSection, idVideo) {
 		super();
@@ -7,7 +7,7 @@ class AbstractIntro extends Screen {
 		this.video = document.getElementById(idVideo);
 
 		this.isVideoPlayed = false;
-		addKeyDownCallback("y", AbstractIntro.playCurrentScreenVideo, "Play video in current screen");
+		addKeyDownCallback("y", VideoScreen.playCurrentScreenVideo, "Play video in current screen");
 	}
 
 	init() {
@@ -15,7 +15,7 @@ class AbstractIntro extends Screen {
 	}
 
 	static playCurrentScreenVideo() {
-		if (!WORKFLOW.currentScreen instanceof AbstractIntro) {
+		if (!WORKFLOW.currentScreen instanceof VideoScreen) {
 			return;
 		}
 		WORKFLOW.currentScreen.playVideo();

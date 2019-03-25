@@ -2,17 +2,17 @@ class Workflow {
 
 	constructor() {
 		this.items = [
-			new Intro(),
-			new CadeauxIntro(),
-			new NuggetsIntro(),
+			new VideoScreen("intro", "intro__video"),
+			new VideoScreen("cadeaux", "cadeaux__video"),
+			new VideoScreen("intro__nuggets", "nuggets__video"),
 			new Nuggets(),
-			new SelOuPoivreIntro(),
+			new VideoScreen("intro__sel_ou_poivre", "sel_ou_poivre__video"),
 			new SelOuPoivre(),
-			new MenusIntro(),
+			new VideoScreen("intro__menu", "menu__video"),
 			new Menus(),
-			new AdditionIntro(),
+			new VideoScreen("intro__addition", "addition__video"),
 			new Addition(),
-			new BurgerDeLaMortIntro(),
+			new VideoScreen("intro__burger_de_la_mort", "burger_de_la_mort__video"),
 			new BurgerDeLaMort()
 		];
 		this.score = new Score();

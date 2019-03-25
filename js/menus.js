@@ -11,10 +11,9 @@ class Menus extends Screen {
 	}
 
 	nextAction() {
-		const nextAnswer = document.querySelector("#menus .menu__label.hide");
-		console.log(nextAnswer);
-		if (nextAnswer) {
-			nextAnswer.classList.remove("hide");
+		const nextMenu = document.querySelector("#menus .menu__label.hide");
+		if (nextMenu) {
+			nextMenu.classList.remove("hide");
 			return true;
 		}
 
