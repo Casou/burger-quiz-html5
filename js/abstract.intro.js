@@ -7,23 +7,28 @@ class AbstractIntro extends Screen {
 		this.video = document.getElementById(idVideo);
 
 		this.isVideoPlayed = false;
+		addKeyDownCallback("y", AbstractIntro.playCurrentScreenVideo, "Play video in current screen");
 	}
 
 	init() {
 
 	}
 
-	nextAction() {
-		if (!this.video.paused) {
-			return true;
+	static playCurrentScreenVideo() {
+		if (!WORKFLOW.currentScreen instanceof AbstractIntro) {
+			return;
 		}
+		WORKFLOW.currentScreen.playVideo();
+	}
 
-		if (!this.isVideoPlayed) {
+	playVideo() {
+		if (!this.isVideoPlayed && this.video.paused) {
 			this.video.play();
-			return true;
 		}
+	}
 
-		return false;
+	nextAction() {
+		return !this.video.paused;
 	}
 
 	previousAction() {
@@ -36,7 +41,6 @@ class AbstractIntro extends Screen {
 
 	videoEnded() {
 		this.isVideoPlayed = true;
-		this.video.src = this.video.src;
 	}
 
 }

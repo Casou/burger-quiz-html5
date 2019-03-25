@@ -1,5 +1,8 @@
 document.body.onkeydown = function(e){
 	KEY_DOWN_CALLBACKS[e.key] && KEY_DOWN_CALLBACKS[e.key].callback();
+	if (!KEY_DOWN_CALLBACKS[e.key]) {
+		console.warn("Callback not found for ", e.key);
+	}
 };
 
 const addKeyDownCallback = (key, callback, description) => {

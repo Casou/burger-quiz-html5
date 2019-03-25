@@ -4,8 +4,4 @@ class NuggetsIntro extends AbstractIntro {
 		super("intro__nuggets", "nuggets__video");
 	}
 
-	init() {
-		this.video.play();
-	}
-
 }

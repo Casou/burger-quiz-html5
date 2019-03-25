@@ -18,11 +18,6 @@
 
     <script>
         const KEY_DOWN_CALLBACKS = [];
-
-        /*
-        - Générique et intro : https://www.youtube.com/watch?v=ZK2-rB1cR04
-        - Génériques audio prolongés : https://www.youtube.com/watch?v=8p3f6S1njhU
-         */
     </script>
 
 </head>
@@ -33,7 +28,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/generique.mp4"
-               onended="WORKFLOW.getScreen('intro').videoEnded();"
+               onended="WORKFLOW.getScreen('intro').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -45,7 +40,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/cadeaux.mp4"
-               onended="WORKFLOW.getScreen('intro__nuggets').videoEnded();"
+               onended="WORKFLOW.getScreen('cadeaux').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -57,7 +52,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/nuggets.mp4"
-               onended="WORKFLOW.getScreen('intro__nuggets').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__nuggets').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -81,7 +76,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/sel_ou_poivre.mp4"
-               onended="WORKFLOW.getScreen('intro__sel_ou_poivre').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__sel_ou_poivre').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -102,7 +97,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/menus.mp4"
-               onended="WORKFLOW.getScreen('intro__menu').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__menu').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -114,7 +109,8 @@
             <ul>
                 <li><span class="menu__title">Menu</span> <span class="menu__label hide">Années de naissance</span></li>
                 <li><span class="menu__title">Menu</span> <span class="menu__label hide">Écolo/syndico/gaucho</span></li>
-                <li><span class="menu__title">Menu</span> <span class="menu__label hide">Le catch américain durant la golden era, un menu super intéressant mais où il faut quand même être bien calé.</span></li>
+                <li><span class="menu__title">Menu</span> <span class="menu__label hide">Le catch américain : de la Golden Era à l'Attitude Era,
+                    un menu super intéressant mais où il faut quand même être bien calé.</span></li>
             </ul>
         </div>
     </section>
@@ -124,7 +120,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/addition.mp4"
-               onended="WORKFLOW.getScreen('intro__addition').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__addition').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
@@ -141,7 +137,7 @@
                preload="auto"
                poster="resources/images/black.jpg"
                src="resources/videos/burger_de_la_mort.mp4"
-               onended="WORKFLOW.getScreen('intro__burger_de_la_mort').videoEnded();"
+               onended="WORKFLOW.getScreen('intro__burger_de_la_mort').videoEnded(); this.load();"
                onerror="showDiscreetError('Video KO');"
         ></video>
 
