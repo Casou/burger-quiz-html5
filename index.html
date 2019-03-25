@@ -71,6 +71,18 @@
         </div>
     </section>
 
+    <section id="pub1" class="screen hide">
+        <video id="pub1__video"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub1.mp4"
+               onended="WORKFLOW.getScreen('pub1').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <aside class="screen__name">Pub 1</aside>
+    </section>
+
     <section id="intro__sel_ou_poivre" class="screen hide">
         <video id="sel_ou_poivre__video"
                preload="auto"
@@ -90,6 +102,37 @@
             <li class="hide">Stephanie</li>
             <li class="hide">Les 2</li>
         </ul>
+    </section>
+
+    <section id="pub2" class="screen hide">
+        <video id="pub2_intro__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub2_intro.mp4"
+               onended="WORKFLOW.getScreen('pub2').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <video id="pub2__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub2.mp4"
+               onended="WORKFLOW.getScreen('pub2').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <video id="pub2_outro__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub2_outro.mp4"
+               onended="WORKFLOW.getScreen('pub2').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <aside class="screen__name">Pub 2</aside>
     </section>
 
     <section id="intro__menu" class="screen hide">
@@ -113,6 +156,38 @@
                     un menu super intéressant mais où il faut quand même être bien calé.</span></li>
             </ul>
         </div>
+    </section>
+
+
+    <section id="pub3" class="screen hide">
+        <video id="pub3_intro__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub3_intro.mp4"
+               onended="WORKFLOW.getScreen('pub3').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <video id="pub3__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub3.mp4"
+               onended="WORKFLOW.getScreen('pub3').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <video id="pub3_outro__video"
+               class="hide"
+               preload="auto"
+               poster="resources/images/black.jpg"
+               src="resources/videos/pub3_outro.mp4"
+               onended="WORKFLOW.getScreen('pub3').videoEnded(); this.load();"
+               onerror="showDiscreetError('Video KO');"
+        ></video>
+
+        <aside class="screen__name">Pub 2</aside>
     </section>
 
     <section id="intro__addition" class="screen hide">
@@ -198,6 +273,7 @@
     <script src="js/screen.js"></script>
     <script src="js/workflow.js"></script>
     <script src="js/screen.video.js"></script>
+    <script src="js/screen.multipleVideo.js"></script>
 
     <script src="js/nuggets.js"></script>
     <script src="js/selOuPoivre.js"></script>

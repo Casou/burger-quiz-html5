@@ -6,10 +6,19 @@ class Workflow {
 			new VideoScreen("cadeaux", "cadeaux__video"),
 			new VideoScreen("intro__nuggets", "nuggets__video"),
 			new Nuggets(),
+
+			new VideoScreen("pub1", "pub1__video"),
+
 			new VideoScreen("intro__sel_ou_poivre", "sel_ou_poivre__video"),
 			new SelOuPoivre(),
+
+			new MultipleVideoScreen("pub2"),
+
 			new VideoScreen("intro__menu", "menu__video"),
 			new Menus(),
+
+			new MultipleVideoScreen("pub3"),
+
 			new VideoScreen("intro__addition", "addition__video"),
 			new Addition(),
 			new VideoScreen("intro__burger_de_la_mort", "burger_de_la_mort__video"),

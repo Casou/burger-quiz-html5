@@ -61,6 +61,7 @@ section.screen {
     height : 100%;
 }
 
+video.hide,
 section.screen.hide,
 aside.screen__name.hide {
     display : none !important;
