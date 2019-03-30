@@ -1,12 +1,12 @@
 {
   "questions" : [
     {
-      "label" : "Question étymologie (à finir)",
+      "label" : "Parmi ces 4 propositions étymologiques, laquelle est incorrecte ?",
       "responses" : [
-        { "label" : "Réponse A" },
-        { "label" : "Réponse B" },
-        { "label" : "Réponse C", "isGood" : true },
-        { "label" : "Réponse D" }
+        { "label" : "La bougie vient de la ville de Bougie en Algérie" },
+        { "label" : "La fiche en bristol vient de la ville de Bristol en Angleterre" },
+        { "label" : "La gaze vient de la ville de Gaza de la bande de Gaza" },
+        { "label" : "Le trou vient de la ville de Bâle en Suisse", "isGood" : true }
       ]
     },
     {
@@ -16,6 +16,24 @@
         { "label" : "Ta blague elle vaut zéro" },
         { "label" : "Je vais bien tout va bien", "isGood" : true },
         { "label" : "Vas-y, tire là-dedans avec ton harpon" }
+      ]
+    },
+    {
+      "label" : "Laquelle de ces propositions est un animal d’Australie, proche du kangourou ?",
+      "responses" : [
+        { "label" : "Le couscous", "isGood" : true },
+        { "label" : "Le méchoui" },
+        { "label" : "Le barbecue" },
+        { "label" : "Le double-cheese burger" }
+      ]
+    },
+    {
+      "label" : "Que dit-on de la truie quand elle met bas ?",
+      "responses" : [
+        { "label" : "Elle porcinette" },
+        { "label" : "Elle cochonne", "isGood" : true },
+        { "label" : "Elle truite" },
+        { "label" : "Elle pète" }
       ]
     },
     {
@@ -35,25 +53,6 @@
         { "label" : "Zorro et Xéna la guerrière font du Kung Fu au Qatar" },
         { "label" : "Wolfgang a crié : AZTYPOKGFGMSXVBUUUUUU !!!" }
       ]
-    },
-    {
-      "label" : "Que dit-on de la truie quand elle met bas ?",
-      "responses" : [
-        { "label" : "Elle porcinette" },
-        { "label" : "Elle cochonne", "isGood" : true },
-        { "label" : "Elle truite" },
-        { "label" : "Elle pète" }
-      ]
-    },
-    {
-      "label" : "Laquelle de ces propositions est un animal d’Australie, proche du kangourou ?",
-      "responses" : [
-        { "label" : "Le couscous", "isGood" : true },
-        { "label" : "Le méchoui" },
-        { "label" : "Le barbecue" },
-        { "label" : "Le double-cheese burger" }
-      ]
     }
-
   ]
 }
